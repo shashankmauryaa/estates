@@ -1,0 +1,110 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 15vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text-container {
+  position: relative;
+  z-index: 1; /* Below the image */
+  padding-bottom: 2rem;
+}
+
+.hero-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: -1vw; /* Pull title up slightly */
+}
+
+.hero-live-in {
+  font-family: var(--font-heading);
+  font-size: 3vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  max-width: 300px;
+  text-align: right;
+  text-transform: none;
+  line-height: 1.4;
+  color: #334155;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 15.5vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  display: flex;
+  color: var(--color-text);
+  margin-left: -0.5vw; /* Offset padding/alignment */
+}
+
+.char-wrap {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.char {
+  display: inline-block;
+}
+
+.hero-image-container {
+  position: absolute;
+  bottom: -20vh;
+  right: 0;
+  width: 75vw;
+  height: 80vh;
+  z-index: 2; /* Above the text to create overlap effect */
+  pointer-events: none;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  mix-blend-mode: darken;
+}
+
+/* Add a spacer section below to allow scrolling */
+.hero::after {
+  content: "";
+  display: block;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .hero-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    text-align: left;
+  }
+  
+  .hero-title {
+    font-size: 14vw;
+  }
+  
+  .hero-image-container {
+    width: 100vw;
+    height: 60vh;
+    bottom: -10vh;
+  }
+}

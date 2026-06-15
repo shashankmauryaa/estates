@@ -1,0 +1,31 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  z-index: 100;
+  mix-blend-mode: difference;
+  color: white; /* Difference will make it black on light backgrounds, white on dark */
+}
+
+.logo {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.menu-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
