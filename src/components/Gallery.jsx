@@ -2,11 +2,11 @@ import React from 'react';
 import './Gallery.css';
 
 const images = [
-  '/gallery_1.png',
-  '/gallery_2.png',
-  '/gallery_3.png',
-  '/gallery_4.png',
-  '/gallery_5.png',
+  `${import.meta.env.BASE_URL}gallery_1.png`,
+  `${import.meta.env.BASE_URL}gallery_2.png`,
+  `${import.meta.env.BASE_URL}gallery_3.png`,
+  `${import.meta.env.BASE_URL}gallery_4.png`,
+  `${import.meta.env.BASE_URL}gallery_5.png`,
 ];
 
 const Gallery = () => {

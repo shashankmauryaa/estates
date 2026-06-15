@@ -82,7 +82,7 @@ const Hero = () => {
       </div>
       <div className="hero-image-container">
         <img 
-          src="/building_cutout.png" 
+          src={`${import.meta.env.BASE_URL}building_cutout.png`}
           alt="Modern red building cutout" 
           className="hero-image" 
           ref={imageRef} 
