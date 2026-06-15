@@ -64,9 +64,9 @@
 .hero-image-container {
   position: absolute;
   /* bottom: -30vh; */
-  left: 0;
+  left: -20vw;
   right: 0;
-  width: 110vw;
+  width: 135vw;
   height: 145vh;
   z-index: 2; /* Above the text to create overlap effect */
   pointer-events: none;

@@ -35,11 +35,12 @@ const Header = () => {
       <div className={`dropdown-overlay ${isMenuOpen ? 'open' : ''}`}>
         <div className="dropdown-menu-wrapper container">
           <div className="dropdown-menu-content">
-            <a href="mailto:contact@estates.com" className="contact-link">contact@estates.com</a>
-            <a href="tel:+1234567890" className="contact-link">+1 234 567 890</a>
+            <a href="mailto:shashankmaurya7539@gmail.com" className="contact-link">shashankmaurya7539@gmail.com</a>
+            <a href="tel:+917763961399" className="contact-link">+91 7763961399</a>
             <div className="social-links">
-              <a href="#">Instagram</a>
-              <a href="#">LinkedIn</a>
+              <a href="https://www.instagram.com/_shashankmaurya/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://www.linkedin.com/in/shashank-maurya7539/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://github.com/shashankmauryaa" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
         </div>
