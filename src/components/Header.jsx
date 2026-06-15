@@ -1,18 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header className="header container">
-      <div className="logo">Estates.</div>
-      <button className="menu-toggle" aria-label="Menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M3 6H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      </button>
-    </header>
+    <>
+      <header className="header container">
+        <div className="logo">Estates.</div>
+        <div className="menu-container">
+          <button 
+            className="menu-toggle" 
+            aria-label="Menu"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {isMenuOpen ? (
+                <>
+                  <path d="M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </>
+              ) : (
+                <>
+                  <path d="M3 12H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M3 6H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </>
+              )}
+            </svg>
+          </button>
+        </div>
+      </header>
+      
+      <div className={`dropdown-overlay ${isMenuOpen ? 'open' : ''}`}>
+        <div className="dropdown-menu-wrapper container">
+          <div className="dropdown-menu-content">
+            <a href="mailto:contact@estates.com" className="contact-link">contact@estates.com</a>
+            <a href="tel:+1234567890" className="contact-link">+1 234 567 890</a>
+            <div className="social-links">
+              <a href="#">Instagram</a>
+              <a href="#">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

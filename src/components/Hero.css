@@ -63,10 +63,11 @@
 
 .hero-image-container {
   position: absolute;
-  bottom: -20vh;
+  /* bottom: -30vh; */
+  left: 0;
   right: 0;
-  width: 75vw;
-  height: 80vh;
+  width: 110vw;
+  height: 145vh;
   z-index: 2; /* Above the text to create overlap effect */
   pointer-events: none;
 }
